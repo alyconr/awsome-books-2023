@@ -7,8 +7,8 @@
   <img src="./images/logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>The project is a simple book list application designed using HTML, CSS, and JavaScript. It allows users to add, edit, and remove books from a list. The user interface is clean and user-friendly, featuring a form where users can enter the title and author of a book. When the user clicks the "Add Book" button, the book is added to the list below. Each book entry includes the title and author information, along with a "Delete" button. Clicking the "Delete" button removes the corresponding book from the list.
-
+  <h3><b>
+    AWSOME BOOKS 2023
 </b></h3>
 
 </div>
@@ -42,7 +42,7 @@
 
 # 📖 [Awsome Books'] <a name="about-project"></a>
 
-  **[Awsome Books]** The application is built using a modular JavaScript approach, with functions to handle adding books, displaying the list, and removing books. The book data is stored in an array, allowing for easy manipulation and updating of the list. The user interface is styled with CSS to ensure a visually appealing and responsive layout.
+  **[Awsome Books]**The project is a simple book list application designed using HTML, CSS, and JavaScript. It allows users to add, edit, and remove books from a list. The user interface is clean and user-friendly, featuring a form where users can enter the title and author of a book. When the user clicks the "Add Book" button, the book is added to the list below. Each book entry includes the title and author information, along with a "Delete" button. Clicking the "Delete" button removes the corresponding book from the list. The application is built using a modular JavaScript approach, with functions to handle adding books, displaying the list, and removing books. The book data is stored in an array, allowing for easy manipulation and updating of the list. The user interface is styled with CSS to ensure a visually appealing and responsive layout.
 
 Overall, this book list application provides a straightforward and intuitive way for users to manage their reading list. It can be easily customized and expanded upon to include additional features, such as editing book details or persisting the data using local storage.
 
@@ -112,9 +112,9 @@ Overall, this book list application provides a straightforward and intuitive way
 
 > 
 
-- [Live Demo Link](	https://deploy-preview-2--majestic-chimera-caed1f.netlify.app)
+- [Live Demo Link](	https://GOOGLE.COM)
 
-![](https://github.com/alyconr/DevOpsConf2023/blob/desktop-version/assets/images/Mi%20video.gif)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GETTING STARTED -->
@@ -137,8 +137,8 @@ To run this project  you need the following tools:
 
 Clone this repository to your desired folder:
 ```sh
- cd Personal-Portfolio-Project
- git clone git@github.com:alyconr/DevOpsConf2023.git
+ cd awsome-books-2023
+ git git@github.com:alyconr/awsome-books-2023.git
 ```
 
 
@@ -147,8 +147,8 @@ Clone this repository to your desired folder:
 
 
 ```sh
-  cd my-folder
-  git clone git@github.com:alyconr/DevOpsConf2023.git
+ cd awsome-books-2023
+ git git@github.com:alyconr/awsome-books-2023.git
 ```
 
 
@@ -213,15 +213,14 @@ You can deploy this project using your local enviroment or use Netlify bot to de
 ## 👥 Authors <a name="authors"></a>
 
 JEYSSON CONTRERAS
-Cindy Shin
+
 
 👤 **Author1**
 
 - GitHub: [@alyconr](https://github.com/alyconr)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/jeysson-aly-contreras/)
 
-👤 **Author2**
-LinkedIn: [LinkedIn](https://www.linkedin.com/in/adagio07?original_referer=)
+
 
 
 
@@ -232,15 +231,12 @@ LinkedIn: [LinkedIn](https://www.linkedin.com/in/adagio07?original_referer=)
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **[Toolbar]**
-- [ ] **[Headline]**
-- [ ] **[Home-section]**
-- [ ] **[About-Section]**
-- [ ] **[Speakers-Section]**
-- [ ] **[Main-Program-Section]**
-- [ ] **[Mobile first]**
-- [ ] **[Desktop version]**
-- [ ] **[Mobile Menu]**
+- [ ] **[Display Books]**
+- [ ] **[Remove Books]**
+- [ ] **[Modular JavaScript]**
+- [ ] **[Data Persistence]**
+- [ ] **[Edit Book Details]**
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -251,7 +247,7 @@ LinkedIn: [LinkedIn](https://www.linkedin.com/in/adagio07?original_referer=)
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/alyconr/DevOpsConf2023.git/issues).
+Feel free to check the [issues page](https://github.com/alyconr/awsome-books-2023/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -271,7 +267,7 @@ If you like this project please give  one start.
 
 
 
-I would like to thank  my learning teammates and the Microsoft staff  to support me all the time.
+I would like to thank  God for giving me the strength to carry out this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
