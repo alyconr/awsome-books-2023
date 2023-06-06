@@ -4,7 +4,7 @@
 
 <div align="center">
   
-  <img src="./assets/images/logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./images/logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>The project is a simple book list application designed using HTML, CSS, and JavaScript. It allows users to add, edit, and remove books from a list. The user interface is clean and user-friendly, featuring a form where users can enter the title and author of a book. When the user clicks the "Add Book" button, the book is added to the list below. Each book entry includes the title and author information, along with a "Delete" button. Clicking the "Delete" button removes the corresponding book from the list.
