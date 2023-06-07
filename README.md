@@ -42,7 +42,7 @@
 
 # 📖 [Awsome Books'] <a name="about-project"></a>
 
-  **[Awsome Books]**The project is a simple book list application designed using HTML, CSS, and JavaScript. It allows users to add, edit, and remove books from a list. The user interface is clean and user-friendly, featuring a form where users can enter the title and author of a book. When the user clicks the "Add Book" button, the book is added to the list below. Each book entry includes the title and author information, along with a "Delete" button. Clicking the "Delete" button removes the corresponding book from the list. The application is built using a modular JavaScript approach, with functions to handle adding books, displaying the list, and removing books. The book data is stored in an array, allowing for easy manipulation and updating of the list. The user interface is styled with CSS to ensure a visually appealing and responsive layout.
+  **[Awsome Books]**The project is a simple book list application designed using HTML, CSS, and JavaScript. It allows users to add, edit, and remove books from a list. The user interface is clean and user-friendly, featuring a form where users can enter the title and author of a book. When the user clicks the "Add Book" button, the book is added to the list below. Each book entry includes the title and author information, along with a "Delete" button. Clicking the "Delete" button removes the corresponding book from the list. The application is built using a modular JavaScript approach, with functions to handle adding books, displaying the list, removing books, editing and saveing books. The book data is stored in an array, allowing for easy manipulation and updating of the list. The user interface is styled with CSS to ensure a visually appealing and responsive layout.
 
 Overall, this book list application provides a straightforward and intuitive way for users to manage their reading list. It can be easily customized and expanded upon to include additional features, such as editing book details or persisting the data using local storage.
 
@@ -103,6 +103,19 @@ Overall, this book list application provides a straightforward and intuitive way
 - **[Data Persistence]**
 - **[Edit Book Details ]**
 - **[CI and CD Deployment with Netlify]**
+
+This code implements a simple book management system using JavaScript. It allows users to add, edit, and delete books, and displays them in a table format.
+
+###Features
+Add Book: Users can enter the book name and author in a form and add the book to the table by submitting the form.
+
+##Edit Book: Each book entry in the table has an "Edit" button that allows users to modify the book's name and author. Clicking the "Edit" button replaces the text cells with input fields for editing. Users can save the changes or cancel the edit.
+
+##Delete Book: Each book entry in the table has a "Delete" button that removes the book from the table when clicked.
+
+##Persistent Storage: The application stores the book data in the browser's localStorage API. This allows the books to persist even after the page is refreshed or closed. The book data is stored as a JSON string.
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -178,7 +191,12 @@ Eslint
 
 ### Usage
 
-To run the project, execute the following command:
+Usage
+To add a book, fill in the book name and author in the provided form and click the "Add Book" button.
+
+To edit a book, click the "Edit" button next to the book entry in the table. Modify the book's name and author in the input fields and click the "Save" button to save the changes. Click the "Cancel" button to discard the changes.
+
+To delete a book, click the "Delete" button next to the book entry in the table. The book will be removed from the table.
 
 
 
