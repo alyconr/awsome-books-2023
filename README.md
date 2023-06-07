@@ -4,7 +4,7 @@
 
 <div align="center">
   
-  <img src="./images/logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./assets/images/logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>
