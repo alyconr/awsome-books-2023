@@ -1,4 +1,4 @@
-export default class BookManager {
+class BookManager {
   constructor() {
     this.books = [];
     this.attachEventListeners();
@@ -201,3 +201,5 @@ export default class BookManager {
     contactSection.style.display = 'none';
   }
 }
+
+export default BookManager;
