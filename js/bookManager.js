@@ -51,7 +51,7 @@ class BookManager {
     const saveButton = document.createElement('button');
     saveButton.className = 'btn btn-primary';
     saveButton.textContent = 'Save';
-    saveButton.addEventListener('click', () => this.saveBook(row, nameCell, authorCell));
+    saveButton.addEventListener('click', () => this.saveBook(row, nameCell, authorCell));  
 
     const cancelButton = document.createElement('button');
     cancelButton.className = 'btn btn-secondary';
