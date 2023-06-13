@@ -18,7 +18,7 @@ class BookManager {
       inputError.textContent = 'Please enter both book name and book author';
       return; // If either book name or author is empty, stop the execution
     }
-
+    const inputError = document.getElementById('inputError');
     inputError.textContent = '';
     inputError.style.display = 'none';
 
@@ -28,9 +28,6 @@ class BookManager {
 
     this.createTableRow(book);
     this.saveBooksToLocalStorage();
-   
-
- 
 
     document.getElementById('bookName').value = '';
     document.getElementById('bookAuthor').value = '';
@@ -51,8 +48,7 @@ class BookManager {
     const saveButton = document.createElement('button');
     saveButton.className = 'btn btn-primary';
     saveButton.textContent = 'Save';
-    saveButton.addEventListener('click', () => this.saveBook(row, nameCell, authorCell));  
-
+    saveButton.addEventListener('click', () => this.saveBook(row, nameCell, authorCell));
     const cancelButton = document.createElement('button');
     cancelButton.className = 'btn btn-secondary';
     cancelButton.textContent = 'Cancel';
@@ -194,7 +190,6 @@ class BookManager {
     tableHead.style.display = 'table';
     tableHead.style.position = 'relative';
     tableHead.style.width = '100%';
-
   }
 
   showContactSection() {
@@ -216,10 +211,7 @@ class BookManager {
     contactSection.style.display = 'none';
     const inputError = document.getElementById('inputError');
     inputError.style.display = 'none';
-  }
-
- 
+  };
 }
-
 
 export default BookManager;
