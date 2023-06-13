@@ -4,7 +4,7 @@
 
 <div align="center">
   
-  <img src="./images/logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./assets/images/logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>
@@ -42,7 +42,7 @@
 
 # 📖 [Awsome Books'] <a name="about-project"></a>
 
-  **[Awsome Books]**The project is a simple book list application designed using HTML, CSS, and JavaScript. It allows users to add, edit, and remove books from a list. The user interface is clean and user-friendly, featuring a form where users can enter the title and author of a book. When the user clicks the "Add Book" button, the book is added to the list below. Each book entry includes the title and author information, along with a "Delete" button. Clicking the "Delete" button removes the corresponding book from the list. The application is built using a modular JavaScript approach, with functions to handle adding books, displaying the list, removing books, editing and saveing books. The book data is stored in an array, allowing for easy manipulation and updating of the list. The user interface is styled with CSS to ensure a visually appealing and responsive layout.
+  **[Awsome Books]**The project is a simple book list application designed using HTML, CSS, and JavaScript. It allows users to add, edit, and remove books from a list. The user interface is clean and user-friendly, featuring a form where users can enter the title and author of a book. When the user clicks the "Add Book" button, the book is added to the list below. Each book entry includes the title and author information, along with a "Delete" button. Clicking the "Delete" button removes the corresponding book from the list and the local storage. The application is built using a modular JavaScript approach, with functions to handle adding books, displaying the list, removing books, editing and saveing books. The book data is stored in an array, allowing for easy manipulation and updating of the list. The user interface is styled with CSS to ensure a visually appealing and responsive layout.
 
 Overall, this book list application provides a straightforward and intuitive way for users to manage their reading list. It can be easily customized and expanded upon to include additional features, such as editing book details or persisting the data using local storage.
 
