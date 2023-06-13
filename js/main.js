@@ -1,4 +1,4 @@
-import BookManager from './bookManager.js';
+import BookManager from './bookManager.mjs';
 
 const bookManager = new BookManager();
 
