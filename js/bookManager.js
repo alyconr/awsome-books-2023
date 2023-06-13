@@ -190,7 +190,7 @@ class BookManager {
     contactSection.style.alignItems = 'center';
   }
 
-  hideSections() {
+  hideSections = () => {
     const bookForm = document.getElementById('bookForm');
     bookForm.style.display = 'none';
     const bookList = document.getElementById('bookList');
