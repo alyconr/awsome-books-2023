@@ -1,41 +1,17 @@
+import {
+  showBookForm,
+  showBookList,
+  showContactSection,
+} from './navigationModule.js';
+
 class BookManager {
   constructor() {
     this.books = [];
     this.attachEventListeners();
     this.loadBooks();
-    this.displayCurrentDate();
   }
 
-  displayCurrentDate = () => {
-    const currentDateElement = document.createElement('div');
-    currentDateElement.style.marginTop = '10px';
-    currentDateElement.style.marginRight = '20px';
-    currentDateElement.style.fontWeight = 'bold';
-    currentDateElement.style.color = 'white';
-    currentDateElement.style.textAlign = 'end';
-    currentDateElement.style.fontSize = '15px';
-
-    const updateMinutesSecondsCount = () => {
-      // eslint-disable-next-line no-undef
-      const currentDateTime = luxon.DateTime.local();
-      const currentDate = currentDateTime.toLocaleString({
-        weekday: 'long',
-        month: 'long',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric',
-      });
-      currentDateElement.textContent = `Current Date: ${currentDate} `;
-    };
-
-    updateMinutesSecondsCount();
-    setInterval(updateMinutesSecondsCount, 1000);
-    const navigationBar = document.getElementById('navigationBar');
-    navigationBar.insertAdjacentElement('afterend', currentDateElement);
-  };
-
-  addBook(event) {
+  addBook = (event) => {
     event.preventDefault();
 
     const bookName = document.getElementById('bookName').value;
@@ -54,7 +30,7 @@ class BookManager {
 
     const book = {
       name: bookName,
-      author: bookAuthor
+      author: bookAuthor,
     };
 
     this.books.push(book);
@@ -64,9 +40,9 @@ class BookManager {
 
     document.getElementById('bookName').value = '';
     document.getElementById('bookAuthor').value = '';
-  }
+  };
 
-  editBook(event) {
+  editBook = (event) => {
     const row = event.target.closest('tr');
     const nameCell = row.children[0];
     const authorCell = row.children[1];
@@ -95,9 +71,9 @@ class BookManager {
     actionsCell.textContent = '';
     actionsCell.appendChild(saveButton);
     actionsCell.appendChild(cancelButton);
-  }
+  };
 
-  saveBook(row, nameCell, authorCell) {
+  saveBook = (row, nameCell, authorCell) => {
     const bookNameInput = nameCell.querySelector('input');
     const bookAuthorInput = authorCell.querySelector('input');
 
@@ -113,15 +89,15 @@ class BookManager {
     if (rowIndex !== -1) {
       this.books[rowIndex] = {
         name: bookName,
-        author: bookAuthor
+        author: bookAuthor,
       };
       this.saveBooksToLocalStorage();
     }
 
     window.location.reload();
-  }
+  };
 
-  cancelEdit(row, nameCell, authorCell) {
+  cancelEdit = (row, nameCell, authorCell) => {
     const bookNameInput = nameCell.querySelector('input');
     const bookAuthorInput = authorCell.querySelector('input');
 
@@ -141,9 +117,9 @@ class BookManager {
     }
 
     window.location.reload();
-  }
+  };
 
-  deleteBook(row, bookName, bookAuthor) {
+  deleteBook = (row, bookName, bookAuthor) => {
     row.remove();
 
     const bookIndex = this.books.findIndex(
@@ -153,9 +129,9 @@ class BookManager {
       this.books.splice(bookIndex, 1);
       this.saveBooksToLocalStorage();
     }
-  }
+  };
 
-  createTableRow(book) {
+  createTableRow = (book) => {
     const row = document.createElement('tr');
     const nameCell = document.createElement('td');
     nameCell.textContent = book.name;
@@ -177,75 +153,32 @@ class BookManager {
     row.appendChild(authorCell);
     row.appendChild(actionsCell);
     document.getElementById('bookList').appendChild(row);
-  }
+  };
 
-  saveBooksToLocalStorage() {
+  saveBooksToLocalStorage = () => {
     localStorage.setItem('books', JSON.stringify(this.books));
-  }
+  };
 
-  loadBooks() {
+  loadBooks = () => {
     this.books = JSON.parse(localStorage.getItem('books')) || [];
     this.books.forEach((book) => this.createTableRow(book));
-  }
+  };
 
-  attachEventListeners() {
+  attachEventListeners = () => {
     const bookForm = document.getElementById('bookForm');
     bookForm.addEventListener('submit', (event) => this.addBook(event));
 
     const addBookLink = document.getElementById('addBookLink');
-    addBookLink.addEventListener('click', () => this.showBookForm());
+    addBookLink.addEventListener('click', () => showBookForm());
 
     const showListLink = document.getElementById('showListLink');
-    showListLink.addEventListener('click', () => this.showBookList());
+    showListLink.addEventListener('click', () => showBookList());
 
     const contactLink = document.getElementById('contactLink');
-    contactLink.addEventListener('click', () => this.showContactSection());
+    contactLink.addEventListener('click', () => showContactSection());
 
     const awsomeBookLink = document.getElementById('awsomeBooksHome');
-    awsomeBookLink.addEventListener('click', () => this.showBookForm());
-  }
-
-  showBookForm() {
-    this.hideSections();
-    const bookForm = document.getElementById('bookForm');
-    bookForm.style.display = 'block';
-  }
-
-  showBookList() {
-    this.hideSections();
-    const bookForm = document.getElementById('bookForm');
-    bookForm.style.display = 'none';
-    const bookList = document.getElementById('bookList');
-    bookList.style.display = 'table';
-    bookList.style.position = 'relative';
-    bookList.style.width = '100%';
-    const contactSection = document.getElementById('contactSection');
-    contactSection.style.display = 'none';
-    const tableHead = document.getElementById('table-head');
-    tableHead.style.display = 'table';
-    tableHead.style.position = 'relative';
-    tableHead.style.width = '100%';
-  }
-
-  showContactSection() {
-    this.hideSections();
-    const contactSection = document.getElementById('contactSection');
-    contactSection.style.display = 'flex';
-    contactSection.style.flexDirection = 'column';
-    contactSection.style.alignItems = 'center';
-  }
-
-  hideSections = () => {
-    const bookForm = document.getElementById('bookForm');
-    bookForm.style.display = 'none';
-    const bookList = document.getElementById('bookList');
-    bookList.style.display = 'none';
-    const tableHead = document.getElementById('table-head');
-    tableHead.style.display = 'none';
-    const contactSection = document.getElementById('contactSection');
-    contactSection.style.display = 'none';
-    const inputError = document.getElementById('inputError');
-    inputError.style.display = 'none';
+    awsomeBookLink.addEventListener('click', () => showBookForm());
   };
 }
 
