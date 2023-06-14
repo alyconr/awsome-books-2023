@@ -22,12 +22,12 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/luxon@2.2.0/build/global/luxon.min.js"></script>
-
   </head>
   <body>
     <header>
       <nav
-        class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-bottom-dark" id="navigationBar"
+        class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-bottom-dark"
+        id="navigationBar"
         data-bs-theme="dark"
       >
         <div class="container-fluid">
@@ -82,36 +82,38 @@
         </div>
       </nav>
     </header>
- 
 
     <h1 class="text-center mt-5 text-light">AWSOME BOOKS APPLICATION</h1>
-    <form
-      class="w-25 my-5 position-relative top-0 start-50 translate-middle-x"
-      id="bookForm"
-    >
-      <div class="form-group">
-        <label class="fw-bold my-2 text-light" for="bookName">Book Name</label>
-        <input
-          type="text"
-          class="form-control"
-          id="bookName"
-          placeholder="Enter book name"
-        />
+    <div class="container">
+      <div class="d-flex justify-content-center">
+        <form class="w-50 my-5" id="bookForm">
+          <div class="form-group">
+            <label class="fw-bold my-2 text-light" for="bookName"
+              >Book Name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="bookName"
+              placeholder="Enter book name"
+            />
+          </div>
+          <div class="form-group">
+            <label class="fw-bold my-2 text-light" for="bookAuthor"
+              >Book Author</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="bookAuthor"
+              placeholder="Enter book author"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary my-3">Add Book</button>
+          <span id="inputError" class="error"></span>
+        </form>
       </div>
-      <div class="form-group">
-        <label class="fw-bold my-2 text-light" for="bookAuthor"
-          >Book Author</label
-        >
-        <input
-          type="text"
-          class="form-control"
-          id="bookAuthor"
-          placeholder="Enter book author"
-        />
-      </div>
-      <button type="submit" class="btn btn-primary my-3">Add Book</button>
-      <span id="inputError" class="error"></span>
-    </form>
+    </div>
 
     <div class="container p-3">
       <table class="table table-responsive">
@@ -160,13 +162,24 @@
               <a
                 href="https://www.linkedin.com/in/jeysson-aly-contreras/"
                 target="_blank"
-                link rel="noopener noreferrer"
+                link
+                rel="noopener noreferrer"
                 ><i class="fa fa-linkedin"></i
               ></a>
-              <a href="https://twitter.com/alyconrcigarro" target="_blank" link rel="noopener noreferrer">
+              <a
+                href="https://twitter.com/alyconrcigarro"
+                target="_blank"
+                link
+                rel="noopener noreferrer"
+              >
                 <i class="fa fa-twitter"></i
               ></a>
-              <a href="https://github.com/alyconr" target="_blank" link rel="noopener noreferrer">
+              <a
+                href="https://github.com/alyconr"
+                target="_blank"
+                link
+                rel="noopener noreferrer"
+              >
                 <i class="fa fa-github"></i
               ></a>
             </div>
@@ -174,6 +187,45 @@
         </div>
       </div>
     </section>
+
+    <footer class="fixed-bottom bg-dark text-light p-3">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="text-center mt-4">
+              &copy; 2021 Jeysson Contreras. All Rights Reserved.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <p class="text-center">
+              <a
+                href="https://www.linkedin.com/in/jeysson-aly-contreras/"
+                target="_blank"
+                link
+                rel="noopener noreferrer"
+                ><i class="fa fa-linkedin fs-2 p-3"></i
+              ></a>
+              <a
+                href="https://twitter.com/alyconrcigarro"
+                target="_blank"
+                link
+                rel="noopener noreferrer"
+              >
+                <i class="fa fa-twitter fs-2 p-3 "></i
+              ></a>
+              <a
+                href="https://github.com/alyconr"
+                target="_blank"
+                link
+                rel="noopener noreferrer"
+              >
+                <i class="fa fa-github fs-2 p-3"></i
+              ></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script type="module" src="./js/main.js"></script>
   </body>
