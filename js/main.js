@@ -1,5 +1,5 @@
 function addBook(event) {
-  event.preventDefault(); // Prevent the form from submitting
+  event.preventDefault(); // Prevent the form from submitting and refreshing the page
 
   // Get input values
   const bookName = document.getElementById('bookName').value;
