@@ -3,7 +3,37 @@ class BookManager {
     this.books = [];
     this.attachEventListeners();
     this.loadBooks();
+    this.displayCurrentDate();
   }
+
+  displayCurrentDate = () => {
+    const currentDateElement = document.createElement('div');
+    currentDateElement.style.marginTop = '10px';
+    currentDateElement.style.marginRight = '20px';
+    currentDateElement.style.fontWeight = 'bold';
+    currentDateElement.style.color = 'white';
+    currentDateElement.style.textAlign = 'end';
+    currentDateElement.style.fontSize = '15px';
+
+    const updateMinutesSecondsCount = () => {
+      // eslint-disable-next-line no-undef
+      const currentDateTime = luxon.DateTime.local();
+      const currentDate = currentDateTime.toLocaleString({
+        weekday: 'long',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+      });
+      currentDateElement.textContent = `Current Date: ${currentDate} `;
+    };
+
+    updateMinutesSecondsCount();
+    setInterval(updateMinutesSecondsCount, 1000);
+    const navigationBar = document.getElementById('navigationBar');
+    navigationBar.insertAdjacentElement('afterend', currentDateElement);
+  };
 
   addBook(event) {
     event.preventDefault();
@@ -11,7 +41,21 @@ class BookManager {
     const bookName = document.getElementById('bookName').value;
     const bookAuthor = document.getElementById('bookAuthor').value;
 
-    const book = { name: bookName, author: bookAuthor };
+    if (bookName.trim() === '' || bookAuthor.trim() === '') {
+      const inputError = document.getElementById('inputError');
+      inputError.style.display = 'block';
+      inputError.className = 'alert alert-danger';
+      inputError.textContent = 'Please enter both book name and book author';
+      return; // If either book name or author is empty, stop the execution
+    }
+    const inputError = document.getElementById('inputError');
+    inputError.textContent = '';
+    inputError.style.display = 'none';
+
+    const book = {
+      name: bookName,
+      author: bookAuthor
+    };
 
     this.books.push(book);
 
@@ -38,12 +82,10 @@ class BookManager {
     saveButton.className = 'btn btn-primary';
     saveButton.textContent = 'Save';
     saveButton.addEventListener('click', () => this.saveBook(row, nameCell, authorCell));
-
     const cancelButton = document.createElement('button');
     cancelButton.className = 'btn btn-secondary';
     cancelButton.textContent = 'Cancel';
     cancelButton.addEventListener('click', () => this.cancelEdit(row, nameCell, authorCell));
-
     nameCell.textContent = '';
     nameCell.appendChild(bookNameInput);
     authorCell.textContent = '';
@@ -69,7 +111,10 @@ class BookManager {
 
     const rowIndex = Array.from(row.parentNode.children).indexOf(row);
     if (rowIndex !== -1) {
-      this.books[rowIndex] = { name: bookName, author: bookAuthor };
+      this.books[rowIndex] = {
+        name: bookName,
+        author: bookAuthor
+      };
       this.saveBooksToLocalStorage();
     }
 
@@ -199,7 +244,9 @@ class BookManager {
     tableHead.style.display = 'none';
     const contactSection = document.getElementById('contactSection');
     contactSection.style.display = 'none';
-  }
+    const inputError = document.getElementById('inputError');
+    inputError.style.display = 'none';
+  };
 }
 
 export default BookManager;

@@ -21,11 +21,13 @@
       src="https://kit.fontawesome.com/c06d1ae656.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.2.0/build/global/luxon.min.js"></script>
+
   </head>
   <body>
     <header>
       <nav
-        class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-bottom-dark"
+        class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-bottom-dark" id="navigationBar"
         data-bs-theme="dark"
       >
         <div class="container-fluid">
@@ -80,6 +82,7 @@
         </div>
       </nav>
     </header>
+ 
 
     <h1 class="text-center mt-5 text-light">AWSOME BOOKS APPLICATION</h1>
     <form
@@ -107,6 +110,7 @@
         />
       </div>
       <button type="submit" class="btn btn-primary my-3">Add Book</button>
+      <span id="inputError" class="error"></span>
     </form>
 
     <div class="container p-3">
@@ -140,6 +144,7 @@
             <img
               src="./assets/images/pexels-photo-459225.jpeg"
               class="background"
+              alt="profile-sample1"
             />
           </div>
           <div class="profile-thumb-block">
@@ -152,9 +157,18 @@
           <div class="card-content">
             <h2>Jeysson Contreras<small>Full Stack Dveloper</small></h2>
             <div class="icon-block">
-              <a href="#"><i class="fa fa-linkedin"></i></a
-              ><a href="#"> <i class="fa fa-twitter"></i></a
-              ><a href="#"> <i class="fa fa-github"></i></a>
+              <a
+                href="https://www.linkedin.com/in/jeysson-aly-contreras/"
+                target="_blank"
+                link rel="noopener noreferrer"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+              <a href="https://twitter.com/alyconrcigarro" target="_blank" link rel="noopener noreferrer">
+                <i class="fa fa-twitter"></i
+              ></a>
+              <a href="https://github.com/alyconr" target="_blank" link rel="noopener noreferrer">
+                <i class="fa fa-github"></i
+              ></a>
             </div>
           </div>
         </div>
