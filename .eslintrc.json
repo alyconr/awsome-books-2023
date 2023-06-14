@@ -16,6 +16,7 @@
       "no-param-reassign": "off",
       "eol-last": "off",
       "comma-dangle": "off",
+      "import/prefer-default-export": "off",
       "no-use-before-define": ["error", { "functions": false, "classes": false }],
       "linebreak-style": 0,
       "object-shorthand": 0,
